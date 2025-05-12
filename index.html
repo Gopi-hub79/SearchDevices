@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Devices</title>
+  <style>
+    #searchBar {
+      display: none;
+      margin-top: 20px;
+    }
+    #result {
+      margin-top: 10px;
+      color: red;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+    <h1>Hii Incharge!!!</h1>
+
+  <a href="#" onclick="showSearchBar()">Click here to search devices</a>
+
+  <div id="searchBar">
+    <input type="text" id="searchInput" placeholder="Enter name to search">
+    <button onclick="searchName()">Search</button>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+    const names = [
+      "TLQU5224"
+    ];
+
+    function showSearchBar() {
+      document.getElementById('searchBar').style.display = 'block';
+    }
+
+    function searchName() {
+      const query = document.getElementById('searchInput').value.trim().toUpperCase();
+      const result = document.getElementById('result');
+      const found = names.some(name => name.toUpperCase() === query);
+      if (found) {
+        result.textContent = `"${query}" found in the list.`;
+        result.style.color = "green";
+      } else {
+        result.textContent = `"${query}" is not in the list.`;
+        result.style.color = "red";
+      }
+    }
+   
+  </script>
+
+</body>
+</html>
