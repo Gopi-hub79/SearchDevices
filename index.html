@@ -29,7 +29,7 @@
 
   <script>
     const names = [
-      "TLQU5224","TLQU5005","TLQU5431"
+      "TLQU5632","TLQU5005","TLQU5680","TLQU5122","TLQU5437","TLQU5408","TLQU5697","TLQU5695","TLQU5233","TLQU5673","TLQU5659","TLQU6661","TLDU7025","TLQU6663","TLDU2668","TLDU1749","TLDU1808","TLDU2566","TLDU2436","TLQU0523"
     ];
 
     function showSearchBar() {
@@ -41,10 +41,10 @@
       const result = document.getElementById('result');
       const found = names.some(name => name.toUpperCase() === query);
       if (found) {
-        result.textContent = `"${query}" found in the list.`;
+        result.textContent = `"${query}" PPM DONE (RELAX).`;
         result.style.color = "green";
       } else {
-        result.textContent = `"${query}" is not in the list.`;
+        result.textContent = `"${query}" NOT DONE (COULD U PLS DO PPM CALL).`;
         result.style.color = "red";
       }
     }
